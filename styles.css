@@ -8,6 +8,7 @@ body {
   
   h2 {
     text-align: center;
+    color:black;
   }
   
   .maincon {
@@ -22,6 +23,10 @@ body {
     display: flex;
     height: 60px;
     width: 460px;
+  }
+
+  .legend {
+    margin: auto;
   }
   
   .sub1 {
@@ -93,7 +98,7 @@ body {
   
   .in1 {
     margin-left: 30px;
-    width: 45px;
+    width: 50px;
     height: 30px;
     align-self: center;
     text-align: center;
@@ -108,7 +113,7 @@ body {
 
   .in2 {
     margin-left: 25px;
-    width: 45px;
+    width: 50px;
     height: 30px;
     align-self: center;
     text-align: center;
@@ -116,7 +121,7 @@ body {
   }
   
   .rating {
-    margin-left: 40px;
+    margin-left: 30px;
     font-size: 25px;
     align-self: center;
     color: white;
