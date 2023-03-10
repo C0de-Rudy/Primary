@@ -4,12 +4,17 @@
   <head>
     <title>Mythic+ Rating Calculator</title>
     <link rel="stylesheet" href="./styles.css">
+     <script src="./app.js"></script> 
   </head>
 
   <body>
     <h1>Mythic+ Rating Calculator</h1>
+    <h2>NOTE: each dungeon has a potential deviation of up to 10pts</h2>
     <br>
     <div class="maincon">
+      <div class="subcon">
+        <h2 calss="legend">&ensp;Dungeon &nbsp;|&nbsp;Tyrannical&nbsp; |&nbsp; Fortified &nbsp;| &nbsp;Score</h2>
+      </div>
       <div class="subcon sub1">
         <div class="icons">
           <img class="icons" src="https://render.worldofwarcraft.com/us/zones/temple-of-the-jade-serpent-small.jpg">
@@ -677,7 +682,7 @@
       <div class="logic">
         <h3 id="totalrate" class="total">0</h3>
         <h3 class="totaltxt">Total:</h3>
-        <button class="submit">Submit</button>
+        <button class="submit" onclick="totalscore()">Submit</button>
       </div>
     </div>
   </body>
