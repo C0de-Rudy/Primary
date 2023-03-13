@@ -115,12 +115,12 @@ const tempscore = async (x) => {
     const in2 = parseInt(document.getElementById("tempfort").value);
     const st2 = parseInt(document.getElementById("tempfortst").value);
 
-    if (in1&&in2==0) {
+    if (in1==0&&in2==0) {
         finalscore = 0;
         return finalscore
     } else {
-        const score1 = await splitcalc(in1,st1);
-        const score2 = await splitcalc(in2,st2);
+        let score1 = await splitcalc(in1,st1);
+        let score2 = await splitcalc(in2,st2);
         if (score1>score2) {
             finalscore = (score1*1.5+score2*0.5);
         } else if (score1==score2) {
@@ -140,7 +140,7 @@ const acadscore = async (x) => {
     const in2 = parseInt(document.getElementById("acadfort").value);
     const st2 = parseInt(document.getElementById("acadfortst").value);
 
-    if (in1&&in2==0) {
+    if (in1==0&&in2==0) {
         finalscore = 0;
         return finalscore
     } else {
@@ -165,7 +165,7 @@ const azurscore = async (x) => {
     const in2 = parseInt(document.getElementById("azurfort").value);
     const st2 = parseInt(document.getElementById("azurfortst").value);
 
-    if (in1&&in2==0) {
+    if (in1==0&&in2==0) {
         finalscore = 0;
         return finalscore
     } else {
@@ -190,7 +190,7 @@ const nokscore = async (x) => {
     const in2 = parseInt(document.getElementById("nokfort").value);
     const st2 = parseInt(document.getElementById("nokfortst").value);
 
-    if (in1&&in2==0) {
+    if (in1==0&&in2==0) {
         finalscore = 0;
         return finalscore
     } else {
@@ -215,7 +215,7 @@ const rubyscore = async (x) => {
     const in2 = parseInt(document.getElementById("rubyfort").value);
     const st2 = parseInt(document.getElementById("rubyfortst").value);
 
-    if (in1&&in2==0) {
+    if (in1==0&&in2==0) {
         finalscore = 0;
         return finalscore
     } else {
@@ -240,7 +240,7 @@ const courtscore = async (x) => {
     const in2 = parseInt(document.getElementById("courtfort").value);
     const st2 = parseInt(document.getElementById("courtfortst").value);
 
-    if (in1&&in2==0) {
+    if (in1==0&&in2==0) {
         finalscore = 0;
         return finalscore
     } else {
@@ -265,7 +265,7 @@ const hallsscore = async (x) => {
     const in2 = parseInt(document.getElementById("hallsfort").value);
     const st2 = parseInt(document.getElementById("hallsfortst").value);
 
-    if (in1&&in2==0) {
+    if (in1==0&&in2==0) {
         finalscore = 0;
         return finalscore
     } else {
@@ -356,7 +356,8 @@ try {
 
     const totalscore = temp + acad + azur + nok + ruby + court + halls + shad;
     const totalrate = document.getElementById("totalrate");
-    totalrate.innerHTML = totalscore;    
+    finalscore = Math.round(totalscore * 10)/10;
+    totalrate.innerHTML = finalscore;  
 
         } catch (error) {
 
