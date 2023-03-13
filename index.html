@@ -5,19 +5,34 @@
     <title>Mythic+ Rating Calculator</title>
     <link rel="stylesheet" href="./styles.css">
      <script src="./app.js"></script> 
+     <style>
+      ::placeholder {
+        color: rgb(198, 198, 198);
+        opacity: 1; /* Firefox */
+      }
+      
+      :-ms-input-placeholder { /* Internet Explorer 10-11 */
+       color: rgb(198, 198, 198);
+      }
+      
+      ::-ms-input-placeholder { /* Microsoft Edge */
+       color: rgb(198, 198, 198);
+      }
+      </style>
   </head>
 
   <body>
     <h1>Mythic+ Rating Calculator</h1>
     <div class="maincon">
         <div class="subcon sub0">
-           <h2 class="legend">&nbsp;Dungeon&ensp;&nbsp;|&ensp;Tyrannical&ensp;&nbsp;|&ensp;&ensp;Fortified&ensp;&ensp;|&ensp;Score</h2>
+           <h2 class="legend">Dungeon&ensp;|&emsp;&ensp;&nbsp;&nbsp;Tyrannical&nbsp;&nbsp;&ensp;&emsp;|&emsp;&emsp;&ensp;Fortified&ensp;&emsp;&emsp;|&ensp;Score</h2>
         </div>
         <div class="subcon sub1">
           <div class="icons">
           <img class="icons" src="https://render.worldofwarcraft.com/us/zones/shadowmoon-burial-grounds-small.jpg">
-          <img class="icons texticon" src="https://i.imgur.com/Tr1YByh.jpg">
+          <div class="icons s1replace texticon">SBG</div>
           </div>
+          <div class="gap"></div>
           <p2 class="level">&nbsp;LV:</p2>
           <select id="shadtyr" class="in1">
           <option value="0">0</option>
@@ -51,10 +66,12 @@
           <option value="29">29</option>
           <option value="30">30</option>
           </select>
-          <p2 class="stopwatch">&#9201:</p2>
-          <input class="time"></input>
+          <p2 class="stopwatch">&#9201</p2>
+          <input class="time" placeholder="33"></input>
           <p2 class="col">:</p2>
-          <input class="time2"></input>
+          <input class="time2" placeholder="00"></input>
+          <div class="gap"></div>
+          <p2 class="level">&nbsp;LV:</p2>
           <select id="shadfort" class="in2">
           <option value="0">0</option>
           <option value="2">2</option>
@@ -87,17 +104,21 @@
           <option value="29">29</option>
           <option value="30">30</option>
           </select>
-          <input class="time"></input>
+          <p2 class="stopwatch">&#9201</p2>
+          <input class="time" placeholder="33"></input>
           <p2 class="col">:</p2>
-          <input class="time2"></input>
+          <input class="time2" placeholder="00"></input>
+          <div class="gap"></div>
           <h3 id="shadrate" class="rating">0</h3>
         </div>
         <div class="subcon sub2">
         <div class="icons">
           <img class="icons" src="https://render.worldofwarcraft.com/us/zones/court-of-stars-small.jpg">
-          <img class="icons texticon" src="https://i.imgur.com/ICkC6Oh.jpg">
+          <div class="icons s2replace texticon">Court</div>
         </div>
-        <select id="courttyr" class="in1">
+        <div class="gap"></div>
+        <p2 class="level">&nbsp;LV:</p2>
+        <select id="courttyr" class="in3">
           <option value="0">0</option>
           <option value="2">2</option>
           <option value="3">3</option>
@@ -129,10 +150,13 @@
           <option value="29">29</option>
           <option value="30">30</option>
         </select>
-        <input class="time"></input>
+        <p2 class="stopwatch">&#9201</p2>
+        <input class="time3" placeholder="30"></input>
         <p2 class="col">:</p2>
-        <input class="time2"></input>
-        <select id="courtfort" class="in2">
+        <input class="time4" placeholder="00"></input>
+        <div class="gap"></div>
+        <p2 class="level">&nbsp;LV:</p2>
+        <select id="courtfort" class="in4">
           <option value="0">0</option>
           <option value="2">2</option>
           <option value="3">3</option>
@@ -164,17 +188,21 @@
           <option value="29">29</option>
           <option value="30">30</option>
         </select>
-        <input class="time"></input>
+        <p2 class="stopwatch">&#9201</p2>
+        <input class="time3" placeholder="30"></input>
         <p2 class="col">:</p2>
-        <input class="time2"></input>
+        <input class="time4" placeholder="00"></input>
+        <div class="gap"></div>
         </select>
         <h3 id="courtrate" class="rating">0</h3>
         </div>      
         <div class="subcon sub3">
         <div class="icons">
           <img class="icons" src="https://render.worldofwarcraft.com/us/zones/temple-of-the-jade-serpent-small.jpg">
-          <img class="icons texticon" src="https://i.imgur.com/B5rbg1v.jpeg">
+          <div class="icons s3replace texticon">Temple</div>
         </div>
+        <div class="gap"></div>
+        <p2 class="level">&nbsp;LV:</p2>
         <select id="temptyr" class="in1">
           <option value="0">0</option>
           <option value="2">2</option>
@@ -207,9 +235,12 @@
           <option value="29">29</option>
           <option value="30">30</option>
         </select>
-        <input class="time"></input>
+        <p2 class="stopwatch">&#9201</p2>
+        <input class="time" placeholder="30"></input>
         <p2 class="col">:</p2>
-        <input class="time2"></input>
+        <input class="time2" placeholder="00"></input>
+        <div class="gap"></div>
+        <p2 class="level">&nbsp;LV:</p2>
         <select id="tempfort" class="in2">
           <option value="0">0</option>
           <option value="2">2</option>
@@ -242,17 +273,21 @@
           <option value="29">29</option>
           <option value="30">30</option>
         </select>
-        <input class="time"></input>
+        <p2 class="stopwatch">&#9201</p2>
+        <input class="time" placeholder="30"></input>
         <p2 class="col">:</p2>
-        <input class="time2"></input>
+        <input class="time2" placeholder="00"></input>
+        <div class="gap"></div>
         <h3 id="temprate" class="rating">0</h3>
         </div>
         <div class="subcon sub4">
         <div class="icons">
           <img class="icons" src="https://render.worldofwarcraft.com/us/zones/halls-of-valor-small.jpg">
-          <img class="icons texticon" src="https://i.imgur.com/faW6Dqt.jpg">
+          <div class="icons s4replace texticon">HoV</div>
         </div>
-        <select id="hallstyr" class="in1">
+        <div class="gap"></div>
+        <p2 class="level">&nbsp;LV:</p2>
+        <select id="hallstyr" class="in3">
           <option value="0">0</option>
           <option value="2">2</option>
           <option value="3">3</option>
@@ -284,10 +319,13 @@
           <option value="29">29</option>
           <option value="30">30</option>
         </select>
-        <input class="time"></input>
+        <p2 class="stopwatch">&#9201</p2>
+        <input class="time3" placeholder="38"></input>
         <p2 class="col">:</p2>
-        <input class="time2"></input>
-        <select id="hallsfort" class="in2">
+        <input class="time4" placeholder="00"></input>
+        <div class="gap"></div>
+        <p2 class="level">&nbsp;LV:</p2>
+        <select id="hallsfort" class="in4">
           <option value="0">0</option>
           <option value="2">2</option>
           <option value="3">3</option>
@@ -319,16 +357,20 @@
           <option value="29">29</option>
           <option value="30">30</option>
         </select>
-        <input class="time"></input>
+        <p2 class="stopwatch">&#9201</p2>
+        <input class="time3" placeholder="38"></input>
         <p2 class="col">:</p2>
-        <input class="time2"></input>
+        <input class="time4" placeholder="00"></input>
+        <div class="gap"></div>
         <h3 id="hallsrate" class="rating">0</h3>
         </div>      
         <div class="subcon sub5">
         <div class="icons">
           <img class="icons" src="https://render.worldofwarcraft.com/us/zones/algethar-academy-small.jpg">
-          <img class="icons texticon" src="https://i.imgur.com/epHIGOt.jpg">
+          <div class="icons s5replace texticon">Academy</div>
         </div>
+        <div class="gap"></div>
+        <p2 class="level">&nbsp;LV:</p2>
         <select id="acadtyr" class="in1">
           <option value="0">0</option>
           <option value="2">2</option>
@@ -361,9 +403,12 @@
           <option value="29">29</option>
           <option value="30">30</option>
         </select>
-        <input class="time"></input>
+        <p2 class="stopwatch">&#9201</p2>
+        <input class="time" placeholder="32"></input>
         <p2 class="col">:</p2>
-        <input class="time2"></input>
+        <input class="time2" placeholder="00"></input>
+        <div class="gap"></div>
+        <p2 class="level">&nbsp;LV:</p2>
         <select id="acadfort" class="in2">
           <option value="0">0</option>
           <option value="2">2</option>
@@ -396,17 +441,21 @@
           <option value="29">29</option>
           <option value="30">30</option>
         </select>
-        <input class="time"></input>
+        <p2 class="stopwatch">&#9201</p2>
+        <input class="time" placeholder="32"></input>
         <p2 class="col">:</p2>
-        <input class="time2"></input>
+        <input class="time2" placeholder="00"></input>
+        <div class="gap"></div>
         <h3 id="acadrate" class="rating">0</h3>
         </div>
         <div class="subcon sub6">
         <div class="icons">
           <img class="icons" src="https://render.worldofwarcraft.com/us/zones/the-azure-vault-small.jpg">
-          <img class="icons texticon" src="https://i.imgur.com/66T1qN4.jpg">
+          <div class="icons s6replace texticon">Vault</div>
         </div>
-        <select id="azurtyr" class="in1">
+        <div class="gap"></div>
+        <p2 class="level">&nbsp;LV:</p2>
+        <select id="azurtyr" class="in3">
           <option value="0">0</option>
           <option value="2">2</option>
           <option value="3">3</option>
@@ -438,10 +487,13 @@
           <option value="29">29</option>
           <option value="30">30</option>
         </select>
-        <input class="time"></input>
+        <p2 class="stopwatch">&#9201</p2>
+        <input class="time3" placeholder="34"></input>
         <p2 class="col">:</p2>
-        <input class="time2"></input>
-        <select id="azurfort" class="in2">
+        <input class="time4" placeholder="00"></input>
+        <div class="gap"></div>
+        <p2 class="level">&nbsp;LV:</p2>
+        <select id="azurfort" class="in4">
           <option value="0">0</option>
           <option value="2">2</option>
           <option value="3">3</option>
@@ -473,16 +525,20 @@
           <option value="29">29</option>
           <option value="30">30</option>
         </select>
-        <input class="time"></input>
+        <p2 class="stopwatch">&#9201</p2>
+        <input class="time3" placeholder="34"></input>
         <p2 class="col">:</p2>
-        <input class="time2"></input>
+        <input class="time4" placeholder="00"></input>
+        <div class="gap"></div>
         <h3 id="azurrate" class="rating">0</h3>
         </div>
         <div class="subcon sub7">
         <div class="icons">
           <img class="icons" src="https://render.worldofwarcraft.com/us/zones/ruby-life-pools-small.jpg">
-          <img class="icons texticon" src="https://i.imgur.com/K9OgD3g.jpg">
+          <div class="icons s7replace texticon">Ruby</div>
         </div>
+        <div class="gap"></div>
+        <p2 class="level">&nbsp;LV:</p2>
         <select id="rubytyr" class="in1">
           <option value="0">0</option>
           <option value="2">2</option>
@@ -515,9 +571,12 @@
           <option value="29">29</option>
           <option value="30">30</option>
         </select>
-        <input class="time"></input>
+        <p2 class="stopwatch">&#9201</p2>
+        <input class="time" placeholder="30"></input>
         <p2 class="col">:</p2>
-        <input class="time2"></input>
+        <input class="time2" placeholder="00"></input>
+        <div class="gap"></div>
+        <p2 class="level">&nbsp;LV:</p2>
         <select id="rubyfort" class="in2">
           <option value="0">0</option>
           <option value="2">2</option>
@@ -550,17 +609,21 @@
           <option value="29">29</option>
           <option value="30">30</option>
         </select>
-        <input class="time"></input>
+        <p2 class="stopwatch">&#9201</p2>
+        <input class="time" placeholder="30"></input>
         <p2 class="col">:</p2>
-        <input class="time2"></input>
+        <input class="time2" placeholder="00"></input>
+        <div class="gap"></div>
         <h3 id="rubyrate" class="rating">0</h3>
         </div>
         <div class="subcon sub8">
         <div class="icons">
           <img class="icons" src="https://render.worldofwarcraft.com/us/zones/the-nokhud-offensive-small.jpg">
-          <img class="icons texticon" src="https://i.imgur.com/C6hFBF4.jpg">
+          <div class="icons s8replace texticon">Nokhud</div>
         </div>
-        <select id="noktyr" class="in1">
+        <div class="gap"></div>
+        <p2 class="level">&nbsp;LV:</p2>
+        <select id="noktyr" class="in3">
           <option value="0">0</option>
           <option value="2">2</option>
           <option value="3">3</option>
@@ -592,10 +655,13 @@
           <option value="29">29</option>
           <option value="30">30</option>
         </select>
-        <input class="time"></input>
+        <p2 class="stopwatch">&#9201</p2>
+        <input class="time3" placeholder="40"></input>
         <p2 class="col">:</p2>
-        <input class="time2"></input>
-        <select id="nokfort" class="in2">
+        <input class="time4" placeholder="00"></input>
+        <div class="gap"></div>
+        <p2 class="level">&nbsp;LV:</p2>
+        <select id="nokfort" class="in4">
           <option value="0">0</option>
           <option value="2">2</option>
           <option value="3">3</option>
@@ -627,9 +693,11 @@
           <option value="29">29</option>
           <option value="30">30</option>
         </select>
-        <input class="time"></input>
+        <p2 class="stopwatch">&#9201</p2>
+        <input class="time3" placeholder="40"></input>
         <p2 class="col">:</p2>
-        <input class="time2"></input>
+        <input class="time4" placeholder="00"></input>
+        <div class="gap"></div>
         <h3 id="nokrate" class="rating">0</h3>
       </div>
       <div class="logic">
@@ -637,13 +705,6 @@
         <h3 class="totaltxt">Total:</h3>
         <button class="submit" onclick="totalscore()">Submit</button>
       </div>
-      <p>
-        Each individual dungeon has a potential deviation of up to 10pts.<br>
-        Depletes have the largest deviation, around 25pts per dungeon.
-      </p>
-      <p class="'alpha">
-        !Alpha 1.0.0
-      </p>
     </div>
   </body>
 
