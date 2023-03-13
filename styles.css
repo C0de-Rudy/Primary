@@ -1,14 +1,18 @@
 body {
-  background-color: #97233F;
+  background-color: black;
+  background-image: linear-gradient(0deg, rgb(230, 0, 165) 0%, rgb(230, 0, 165) 18%, black 100%);
+  background-attachment: fixed;
+  background-size: 100% 215%;
 }
 
 h1 {
   text-align: center;
+  color: rgb(158, 1, 114)
 }
 
 h2 {
   text-align: center;
-  color:black;
+  color: rgb(158, 1, 114)
 }
 
 p {
@@ -18,85 +22,187 @@ p {
 
 p2 {
   margin-left: 2px;
-  color: white;
+  color: rgb(198, 198, 198);
   font: bold;
   font-size: 30px;
   margin-top: 10px;
 }
 
-.alpha {
-  color:royalblue
+p3 {
+  color: white;
+  font: bold;
+  font-size: 30px;
+}
+
+.level {
+  color: rgb(198, 198, 198);
+  font-size: 22px;
+  margin: auto;
+  margin-right: 2px;
+  margin-left: 2px;
 }
 
 .maincon {
   position: flex;
   flex-direction: column;
-  width: 490px;
+  width: 610px;
   height: 540px;
   margin: auto;
+  box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
 }
 
 .subcon {
   display: flex;
   height: 60px;
-  width: 490px;
+  width: 610px;
+}
+
+.gap {
+  width: 3px;
+  height: 60px;
+  background: black;
+  margin-right: 2px;
 }
 
 .legend {
   margin-right: 10px;
-}
+} 
 
 .sub0 {
-  width: 500px;
+  width: 625px;
 }
 
 .sub1 {
   background-color: #452c63;
 }
 
+.s1replace {
+  background-color: #452c63;
+  color: rgb(198, 198, 198);
+  font-size: 20px;
+  font: bold;
+  text-align: center;
+  margin: auto;
+}
+
 .sub2 {
   background-color: #33006F;
+}
+
+.s2replace {
+  background-color: #33006F;
+  color: rgb(198, 198, 198);
+  font-size: 20px;
+  font: bold;
+  text-align: center;
+  margin: auto;
 }
 
 .sub3 {
   background-color: #452c63;
 }
 
+.s3replace {
+  background-color: #452c63;
+  color: rgb(198, 198, 198);
+  font-size: 19px;
+  font: bold;
+  text-align: center;
+  margin: auto;
+}
+
 .sub4 {
   background-color: #33006F;
 }
 
-.sub5 {
+.s4replace {
   background-color: #33006F;
+  color: rgb(198, 198, 198);
+  font-size: 20px;
+  font: bold;
+  text-align: center;
+  margin: auto;
+}
+
+.sub5 {
+  background-color: #452c63;
+}
+
+.s5replace {
+  background-color: #452c63;
+  color: rgb(198, 198, 198);
+  font-size: 20px;
+  font: bold;
+  text-align: center;
+  margin: auto;
 }
 
 .sub6 {
-  background-color: #452c63;
+  background-color: #33006F;
+}
+
+.s6replace {
+  background-color: #33006F;
+  color: rgb(198, 198, 198);
+  font-size: 20px;
+  font: bold;
+  text-align: center;
+  margin: auto;
 }
 
 .sub7 {
   background-color: #452c63;
 }
 
+.s7replace {
+  background-color: #452c63;
+  color: rgb(198, 198, 198);
+  font-size: 20px;
+  font: bold;
+  text-align: center;
+  margin: auto;
+}
+
 .sub8 {
   background-color: #33006F;
+}
+
+.s8replace {
+  background-color: #33006F;
+  color: rgb(198, 198, 198);
+  font-size: 20px;
+  font: bold;
+  text-align: center;
+  margin: auto;
 }
 
 .logic {
   flex-direction: row-reverse;
   display: flex;
   height: 60px;
-  width: 460px;
+  width: 610px;
 }
 
 .submit {
+  border-radius: 5px;
+  border-color: grey;
   height: 40px;
+  width: 65px;
   align-self: center;
   margin-right: 15px;
+  background-color: black;
+  font-size: 15px;
+  color: rgb(198, 198, 198);
+  box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+}
+
+.submit:hover {
+  height: 45px;
+  width: 70px;
 }
 
 .icons {
-  width: 110px;
+  width: 100px;
   height: 60px;
   position: relative;
 }
@@ -118,6 +224,23 @@ p2 {
 }
 
 .in1 {
+  border-color: black;
+  background-color: #452c63;
+  color: rgb(198, 198, 198);
+  border-radius: 5px;
+  margin-left: 2px;
+  width: 50px;
+  height: 30px;
+  align-self: center;
+  text-align: center;
+  font-size: 20px;
+}
+
+.in3 {
+  border-color: black;
+  background-color: #33006F;
+  color: rgb(198, 198, 198);
+  border-radius: 5px;
   margin-left: 2px;
   width: 50px;
   height: 30px;
@@ -127,31 +250,62 @@ p2 {
 }
 
 .stopwatch {
+  border-radius: 5px;
   margin-left: 10px;
-  margin-top: 6px;
-  color: white;
-  font: bold;
-  font-size: 30px;
 }
 
 .time {
   border-radius: 5px;
+  border-color: black;
   margin-left: 2px;
   width: 22px;
   height: 22px;
   align-self: center;
   text-align: center;
   font-size: 20px;
+  background-color: #452c63;
+  color:rgb(198, 198, 198);
+}
+
+.time3 {
+  border-radius: 5px;
+  border-color: black;
+  margin-left: 2px;
+  width: 22px;
+  height: 22px;
+  align-self: center;
+  text-align: center;
+  font-size: 20px;
+  background-color: #33006F;
+  color:rgb(198, 198, 198);
 }
 
 .time2 {
   border-radius: 5px;
+  border-color: black;
   width: 22px;
   height: 22px;
   margin-left: 2px;
+  margin-right: 10px;
   align-self: center;
   text-align: center;
   font-size: 20px;
+  background-color: #452c63;
+  color:rgb(198, 198, 198);
+}
+
+.time4 {
+  border-radius: 5px;
+  border-color: black;
+  width: 22px;
+  height: 22px;
+  margin-left: 2px;
+  margin-right: 10px;
+  align-self: center;
+  text-align: center;
+  font-size: 20px;
+  background-color: #33006F;
+  color:rgb(198, 198, 198);
 }
 
 .stars {
@@ -161,7 +315,24 @@ p2 {
 }
 
 .in2 {
-  margin-left: 25px;
+  border-color: black;
+  border-radius: 5px;
+  margin-left: 2px;
+  width: 50px;
+  height: 30px;
+  align-self: center;
+  text-align: center;
+  font-size: 20px;
+  background-color: #452c63;
+  color:rgb(198, 198, 198);
+}
+
+.in4 {
+  border-color: black;
+  background-color: #33006F;
+  color: rgb(198, 198, 198);
+  border-radius: 5px;
+  margin-left: 2px;
   width: 50px;
   height: 30px;
   align-self: center;
@@ -170,24 +341,24 @@ p2 {
 }
 
 .rating {
-  margin-left: 20px;
+  margin-left: 10px;
   font-size: 20px;
   align-self: center;
-  color: white;
+  color: rgb(198, 198, 198);
   border-color: black;
   border: 1px
 }
 
 .total {
-  margin-right: 25px;
+  margin-right: 55px;
   font-size: 30px;
   align-self: center;
-  color: white;
+  color: rgb(198, 198, 198);
 }
 
 .totaltxt {
   margin-right: 10px;
   font-size: 30px;
   align-self: center;
-  color: white;
+  color: rgb(198, 198, 198);
 }
