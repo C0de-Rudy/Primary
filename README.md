@@ -1,3 +1,1 @@
-Salutations,
-
-I am C0de Rudy, and I like computer programming.
+My name is Rudy Verblac. Welcome to my github.
